@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p>1.Find the product</p>
+    <pre>
+        const Find_Prod = (array, N) => 
+{
+  let ans=1;
+  for(let i=0;i<N;i++){
+    ans=ans*array[i];
+  }
+  return ans;
+}
+</pre>
+<p>2.Find the sum</p>
+<pre>
+    const Find_Sum = (array, N) => 
+{
+  let ans=0;
+  for(let i=0;i<N;i++){
+    ans=ans+array[i];
+  }
+  return ans;
+
+};
+</pre>
+<p>3.Count occurence</p>
+<pre>
+    const findCount = (N, K, Arr) => 
+{
+  let ans=0;
+  for(let i=0;i<N;i++){
+    if(K===Arr[i]){
+      ans++;
+    }
+  }
+  return ans;
+    
+};
+</pre>
+<p>4.Even Odd</p>
+<pre>
+    const findEvenOdd = (N, Arr) => 
+{
+  let evenSum=0;
+  let oddSum=0;
+  for(let i=0;i<N;i++){
+    if(Arr[i]%2===0){
+      evenSum+=Arr[i];
+    }else{
+      oddSum+=Arr[i]
+    }
+  }
+  let newArr=[];
+  newArr=[evenSum,oddSum];
+  return newArr;
+  
+};
+</pre>
+<p>5.Find whether number is present or not</p>
+<pre>
+    const Find_Num = (array,N,M) => 
+{
+ for(let i=0;i<N;i++){
+   if(array[i]===M){
+     return 'YES';
+   }
+ }
+ return 'NO';
+};
+</pre>
+<p>6.Higher Age</p>
+<pre>const highAge = (N, Arr) => 
+{
+  let newArr=[]
+  for(let i=0;i<N;i++){
+    if(Arr[i]>=18){
+      newArr.push(Arr[i]);
+      }
+    }
+  return newArr;
+    
+};
+ 
+</pre>
+<p>7.Increment the array element</p>
+<pre>
+    
+const Inc_Arr = (array,N) => 
+{
+  let newArr=[];
+  for(let i=0;i<N;i++){
+    let val=array[i]+1;
+    newArr[i]=val;
+  }
+   console.log(...newArr);
+};
+</pre>
+<p>8.Unique color shirt</p>
+<pre>
+function Unique_Shirts (arr,N) {
+  let freq=[];
+  for(let i=0;i<1001;i++){
+    freq[i]=0;
+  }
+  for(let j=0;j<N;j++){
+    freq[arr[j]]++;
+  }
+  let ans=0;
+  for(let k=0;k<1001;k++){
+    if(freq[k]===1){
+      ans++;
+    }
+  }
+  return ans;
+}
+
+</pre>
+<p>9.Min and Max</p>
+<pre>
+     
+ function arrayMin(arr) {
+   let min=arr[0];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]<min){
+      min=arr[i];
+    }
+     
+  }
+  return min;
+   
+ }
+
+function arrayMax(arr) {
+  let max=arr[0];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]>max){
+    max=arr[i];
+  }
+    
+  }
+ return max;
+
+}
+
+
+
+</pre>    
+</body>
+</html>
